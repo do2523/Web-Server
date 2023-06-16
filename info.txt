@@ -1,0 +1,4 @@
+commands:
+python -m venv venv # to bring virtual enviornment folder to project
+$env:FLASK_APP = "main.py"  # to set up
+python -m flask  # to run server
