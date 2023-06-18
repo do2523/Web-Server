@@ -12,6 +12,12 @@ def my_home():
 def html_page(page_name):
     return render_template(page_name)
 
+
+@app.route('/submit_form', methods=['POST', 'GET'])
+def submit_form():
+    # the code below is executed if the request method
+    # was GET or the credentials were invalid
+    return 'form submitted!!'
 # @app.route("/about.html")
 # def about():
 #     return render_template('about.html')
