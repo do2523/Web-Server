@@ -8,19 +8,23 @@ def my_home():
     return render_template('index.html')
 
 
-@app.route("/about.html")
-def about():
-    return render_template('about.html')
+@app.route('/<string:page_name>')
+def html_page(page_name):
+    return render_template(page_name)
+
+# @app.route("/about.html")
+# def about():
+#     return render_template('about.html')
 
 
-@app.route("/works.html")
-def works():
-    return render_template('works.html')
+# @app.route("/works.html")
+# def works():
+#     return render_template('works.html')
 
 
-@app.route("/contact.html")
-def works():
-    return render_template('contact.html')
+# @app.route("/contact.html")
+# def works():
+#     return render_template('contact.html')
 
 # @app.route("/about.html")
 # def about():
