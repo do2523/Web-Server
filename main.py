@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -18,7 +18,7 @@ def submit_form():
     if request.method == 'POST':
         data = request.form.to_dict()
         print(data)
-        return 'form submitted'
+        return redirect('/thankyou.html')
     else:
         return 'something went wrong! Try Again'
     # the code below is executed if the request method
