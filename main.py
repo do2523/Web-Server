@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -15,9 +15,15 @@ def html_page(page_name):
 
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
+    if request.method == 'POST':
+        data = request.form.to_dict()
+        print(data)
+        return 'form submitted'
+    else:
+        return 'something went wrong! Try Again'
     # the code below is executed if the request method
     # was GET or the credentials were invalid
-    return 'form submitted!!'
+
 # @app.route("/about.html")
 # def about():
 #     return render_template('about.html')
