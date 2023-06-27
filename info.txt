@@ -2,3 +2,5 @@ commands:
 python -m venv venv # to bring virtual enviornment folder to project
 $env:FLASK_APP = "main.py"  # to set up
 python -m flask run  # to run server
+pip freeze > requirements.txt # requirements need to run server
+# apparently I got a bunch of unecessary modules installed for this project
